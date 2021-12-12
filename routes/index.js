@@ -1,10 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var path = require("path")
-var html_file = path.join("../public/index.html")
+import path from "path"
+import express from "express";
+
+const router = express.Router();
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.sendFile(html_file);
+    // const html_file = path.join(__dirname, "public", "index.html")
+    // console.log(html_file)
+    res.send("Why are you not working bro");
 });
 
-module.exports = router;
+export default router
